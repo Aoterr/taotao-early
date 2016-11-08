@@ -1,9 +1,8 @@
 package com.taotao.manage.service;
 
-import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.github.abel533.mapper.Mapper;
@@ -13,8 +12,8 @@ import com.taotao.manage.pojo.ItemCat;
 @Service
 public class ItemCatService extends BaseService<ItemCat>{
 
-//	@Autowired
-//	public ItemCatMapper itemCatMapper;
+	@Autowired
+	public ItemCatMapper itemCatMapper;
 
 //	public List<ItemCat> queryItemCatListByParentsId(Long pid) {
 //		// TODO Auto-generated method stub
@@ -23,9 +22,9 @@ public class ItemCatService extends BaseService<ItemCat>{
 //		return itemCatMapper.select(itemCat);
 //	}
 
-//	@Override
-//	public Mapper<ItemCat> getMapper() {
-//		// TODO Auto-generated method stub
-//		return this.itemCatMapper;
-//	}
+	@Override
+	public Mapper<ItemCat> getMapper() {
+		// TODO Auto-generated method stub
+		return this.itemCatMapper;
+	}
 }

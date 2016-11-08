@@ -21,6 +21,7 @@
 </div>
 <script>
 
+	//选中数量
     function getSelectionsIds(){
     	var itemList = $("#itemList");
     	var sels = itemList.datagrid("getSelections");
@@ -60,7 +61,7 @@
         			$("#itemeEditForm").form("load",data);
         			
         			// 加载商品描述
-        			$.getJSON('/rest/item/desc/'+data.id,function(_data){
+        			$.getJSON('/rest/item/desc/13',function(_data){
         				itemEditEditor.html(_data.itemDesc);
         			});
         			
@@ -95,6 +96,7 @@
         			TAOTAO.init({
         				"pics" : data.image,
         				"cid" : data.cid,
+        				"cname":data.title,
         				fun:function(node){
         					TAOTAO.changeItemParam(node, "itemeEditForm");
         				}
